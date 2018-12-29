@@ -2,14 +2,32 @@ package main
 
 import "fmt"
 
+type (
+	firstName = string
+	lastName  = string
+)
+
+type (
+	firstName1 string
+	lastName1  string
+)
+
+//Employee First class to be exported
+type Employee struct {
+	firstName string
+	lastName  string
+}
+
 func main() {
 	// Octal and hexa decimal
 	var i, j int = 021, 0x21
 
 	// Floating point
-	const PI = 311412.e-5
+	PI := 311412.e-5
+	const salute = "Mr"
+
 	var rawString = `Gaurav Handa\n\r\ris good`
-	var specialString = "Gaurav Handa\t is \n \x41 \u0041 \U00000041 \101 good\u65e5本\U00008a9e\xff\u00FF\t\xe6\x97 \xa5\xe6 \x9c \xac \xe8 \xaa \x9e"
+	var specialString = "Gaurav Handa\t is \n \x41 \u0041 \U00000041 \101 good\u65e5本\U00008a9e\t\xe6\x97\xa5\xe6\x9c\xac\xe8\xaa\x9e"
 
 	var hexRune2, hexRune4, unicodeRune, octalRune = '\x41', '\u0041', '\U00000041', '\101'
 
