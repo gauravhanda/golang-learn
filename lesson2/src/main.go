@@ -2,22 +2,6 @@ package main
 
 import "fmt"
 
-type (
-	firstName = string
-	lastName  = string
-)
-
-type (
-	firstName1 string
-	lastName1  string
-)
-
-//Employee First class to be exported
-type Employee struct {
-	firstName string
-	lastName  string
-}
-
 func main() {
 	// Octal and hexa decimal
 	var i, j int = 021, 0x21
