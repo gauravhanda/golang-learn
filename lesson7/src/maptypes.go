@@ -44,7 +44,7 @@ func main() {
 
 // String to string map
 func runStringToStringMap() {
-	var string2stringMap = make(String2StringMap)
+	var string2stringMap = make(String2StringMap) // No capacity set. Let system handle it
 	string2stringMap["USA"] = "Chicago"
 	string2stringMap["USA"] = "Washington DC"
 	string2stringMap["China"] = "Beijing"
@@ -54,7 +54,7 @@ func runStringToStringMap() {
 
 // String to string map
 func runStringToIntMap() {
-	var string2IntMap = make(String2IntMap)
+	var string2IntMap = make(String2IntMap, 5)
 	string2IntMap["USA"] = 100
 	string2IntMap["China"] = 200
 	fmt.Printf("Map says %d \r\n", len(string2IntMap))
@@ -70,7 +70,7 @@ func (t Employee) fullName() string { return t.lastName + ", " + t.firstName }
 func (t UKEmployee) fullName() string { return t.firstName + ", " + t.lastName }
 
 func runIntToEmployeeMap() {
-	var intToEmployeeMap = make(Id2EmployeeMap)
+	var intToEmployeeMap = make(Id2EmployeeMap, 5) // Setting default capacity to 5
 	// See the inheritance in work
 	var simpleEmployee EmpDetails = Employee{firstName: "Gaurav", lastName: "Handa"}
 	intToEmployeeMap[100] = simpleEmployee
