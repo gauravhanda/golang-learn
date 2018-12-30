@@ -10,6 +10,10 @@ type (
 	Employee     = struct{ name string }
 )
 
+func BuildEmployee(str string) Employee {
+	return Employee{name: "Gaurav"}
+}
+
 func main() {
 	var (
 		k int16        = 1
@@ -19,6 +23,6 @@ func main() {
 	)
 
 	// z = x BigInteger16 type is not equal to int16. Its a new defined type
-	var gaurav = Employee{name: "Handa"}
+	var gaurav = BuildEmployee("gaurav")
 	fmt.Printf("%d\t %d\t %d\t %d\t %s\r\n", x, y, z, k, gaurav.name)
 }
