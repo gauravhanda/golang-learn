@@ -40,6 +40,7 @@ func main() {
 	runStringToStringMap()
 	runStringToIntMap()
 	runIntToEmployeeMap()
+	runNilMap()
 }
 
 // String to string map
@@ -79,5 +80,17 @@ func runIntToEmployeeMap() {
 
 	fmt.Printf("Map says %s \r\n", intToEmployeeMap[100].fullName())
 	fmt.Printf("Map says %s \r\n", intToEmployeeMap[200].fullName())
+	if intToEmployeeMap[300] == nil {
+		fmt.Println("NO Entry found")
+	}
 
+}
+
+func runNilMap() {
+	var nilMap map[string]string
+	if nilMap == nil {
+		fmt.Printf("Tnere is nothing in this map. Its called nil map '%s'\r\n", nilMap["USA"])
+	} else {
+		fmt.Println("Map is not nil")
+	}
 }
